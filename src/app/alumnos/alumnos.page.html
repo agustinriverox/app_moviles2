@@ -1,0 +1,76 @@
+<ion-app color="dark">
+  <ion-header [translucent]="true" class="root">
+    <ion-toolbar>
+        <ion-label id="saludo">Bienvenido {{data.nombre}}</ion-label>
+        <ion-icon></ion-icon>
+      <ion-button slot="start" fill="outline" color="black" (click)="openFirst()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <img src="https://4.bp.blogspot.com/_CVjhncX-oSI/TLyOKu0kdcI/AAAAAAAAABQ/kzYcGlyOu0Y/s1600/logo-fondoazul.jpg">
+    <ion-menu side="start" menuId="first" contentId="main">
+
+      <ion-header>
+  
+        <ion-toolbar color="black">
+  
+          <ion-title>Start Menu</ion-title>
+  
+        </ion-toolbar>
+  
+      </ion-header>
+  
+      <ion-content>
+  
+        <ion-list>
+  
+          <ion-item>
+  
+            Menu Item
+  
+          </ion-item>
+  
+          <ion-item id="item">Escanear QR</ion-item>
+  
+          <ion-item id="item">Ver asistencia</ion-item>
+  
+          <ion-item id="item">Configuración</ion-item>
+  
+          <ion-item id="item" >Contactanos</ion-item>
+          
+        </ion-list>
+        
+      </ion-content>
+  
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+    <ion-card>
+      
+      <ion-card-header>
+
+        <ion-card-subtitle color="dark">Duoc UC</ion-card-subtitle>
+        <ion-card-title color="warning">REGISTRAPP</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>Desde su fundación, en 1968, como “Departamento Universitario Obrero y Campesino”, Duoc UC ha recorrido un largo camino de consolidación hasta convertirse en una de las instituciones clave en la Educación Superior Técnico Profesional de Chile.
+
+        </ion-label>
+      </ion-card-content>
+
+    </ion-card>
+      <br>
+      <ion-button color="primary"shape="round" expand="full">
+        Escanear QR
+      </ion-button>
+      <br>
+      <ion-button shape="round" color="danger" expand="full" [routerLink] ="['/home']">
+        Salir
+      </ion-button>
+    
+    
+  </ion-content>
+  
+</ion-app>
